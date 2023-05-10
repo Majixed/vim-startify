@@ -479,7 +479,7 @@ function! s:get_lists() abort
   else
     return [
           \ { 'header': [s:leftpad .'MRU'],            'type': 'files' },
-          \ { 'header': [s:leftpad .'MRU '. getcwd()], 'type': 'dir' },
+          \ { 'header': [s:leftpad .'MRU '. fnamemodify(getcwd(), ':t'). '/'], 'type': 'dir' },
           \ { 'header': [s:leftpad .'Sessions'],       'type': 'sessions' },
           \ { 'header': [s:leftpad .'Bookmarks'],      'type': 'bookmarks' },
           \ { 'header': [s:leftpad .'Commands'],       'type': 'commands' },
