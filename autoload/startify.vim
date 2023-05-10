@@ -83,8 +83,8 @@ function! startify#insane_in_the_membrane(on_vimenter) abort
     setlocal statusline=\ startify
   endif
 
-  let s:padding_left = startify#get_padding()
-  let s:fixed_column = len(s:padding_left) + 2
+  let s:leftpad = startify#get_padding()
+  let s:fixed_column = len(s:leftpad) + 2
 
   " Must be global so that it can be read by syntax/startify.vim.
   let g:startify_header = exists('g:startify_custom_header')
